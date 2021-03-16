@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="public/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1>Populate the table by reading data from the mongodb database</h1>
+        </div>
+
+        <div class="table-container">
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Mark</th>
+                        <th>Model</th>
+                        <th>Age</th>
+                        <th>Price</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% cars.forEach(car => { %>
+                    <tr>
+                        <th><%= car.Mark %></th>
+                        <th><%= car.Model %></th>
+                        <th><%= car.Age %></th>
+                        <th><%= car.Price %></th>
+                        <th><%= car.Type %></th>
+                    </tr>
+                <% }); %>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Mark</th>
+                        <th>Model</th>
+                        <th>Age</th>
+                        <th>Price</th>
+                        <th>Type</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        </div>
+        
+ 
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="app/main.js"></script>
+</body>
+</html>
